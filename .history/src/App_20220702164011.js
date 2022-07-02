@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Reminder from "./Reminder";
 import Card from "./Card";
 import Todo from "./Todo";
 
@@ -60,11 +61,7 @@ class App extends Component {
     console.log("this.state.characters");
     console.log(this.state.tasks[this.state.tasks.length - 1]);
     let last_element = this.state.tasks[this.state.tasks.length - 1];
-    let new_id = 1;
-    if(last_element)
-      new_id = last_element.id + 1;
-    
-
+    let new_id = last_element.id + 1;
     task = { ...task, id: new_id };
     // return this[this.length - 1];
     console.log("this.state.tasks)))))))))))))))))))))");
